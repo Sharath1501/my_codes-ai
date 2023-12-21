@@ -1,0 +1,11 @@
+Files:
+model.py: Python file with machine learning classification code for prediction.
+app.py: Python file for processing the model on a webpage.
+/templates: Directory containing HTML templates.
+result_classification.html: HTML file displaying the results of the prediction.
+upload.html: HTML file with code for uploading datasets.
+
+Ensure you have the necessary dependencies installed.
+Run app.py to start the web application.
+Visit the specified URL in your browser to interact with the application.
+Feel free to customize and extend the code as needed for your specific use case.
