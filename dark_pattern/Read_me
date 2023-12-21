@@ -1,0 +1,8 @@
+File:
+dark-pattern.py: Python file containing the dark pattern detection model. It uses TfidfVectorizer for feature extraction and a RandomForestClassifier for classification.
+Usage:
+Make sure you have the required dependencies installed.
+Execute dark-pattern.py to apply the model and identify deceptive patterns.
+Model Components:
+TfidfVectorizer: Used for converting text data into a numerical format suitable for machine learning.
+RandomForestClassifier: Employed for classifying patterns as deceptive or non-deceptive.
