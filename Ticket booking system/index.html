@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking System</title>
+</head>
+<body>
+    <h1>Ticket Booking System</h1>
+
+    <p>Remaining Tickets: {{ remaining_tickets }}</p>
+
+    <form action="/book" method="post">
+        <label for="name">User Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="quantity">Quantity (1-5):</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="5" required>
+        <br>
+        <button type="submit">Book Tickets</button>
+        <p>{{ book_message }}</p>
+    </form>
+
+    <hr>
+
+    <form action="/cancel" method="post">
+        <label for="name">User Name:</label>
+        <input type="text" id="cancelName" name="name" required>
+        <br>
+        <label for="quantity">Quantity (1-5):</label>
+        <input type="number" id="cancelQuantity" name="quantity" min="1" max="5" required>
+        <br>
+        <button type="submit">Cancel Tickets</button>
+        <p>{{ cancel_message }}</p>
+    </form>
+
+    <hr>
+
+    <h2>User Information</h2>
+    <table border="1">
+        <tr>
+            <th>User Name</th>
+            <th>Bookings</th>
+            <th>Cancellations</th>
+            <th>Priority</th>
+        </tr>
+        {% for user_info in users_info %}
+            <tr>
+                <td>{{ user_info.name }}</td>
+                <td>{{ user_info.bookings }}</td>
+                <td>{{ user_info.cancellations }}</td>
+                <td>{{ user_info.priority }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
